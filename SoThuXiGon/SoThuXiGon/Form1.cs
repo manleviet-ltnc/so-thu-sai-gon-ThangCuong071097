@@ -19,7 +19,7 @@ namespace SoThuXiGon
 
         private void btnChon_Click(object sender, EventArgs e)
         {
-            lstThuMoi.Items.Add(lstThuMoi.SelectedItem);
+            lstDanhSach.Items.Add(lstThuMoi.SelectedItem);
         }
         private void ListBox_MouseDown(object sender, MouseEventArgs e)
         {
@@ -28,6 +28,22 @@ namespace SoThuXiGon
 
             lb.DoDragDrop(lb.Items[index].ToString(),
                           DragDropEffects.Copy);
+        }
+        private void ListBox_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.Move;
+        }
+
+        private void lstDanhSach_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+            {
+                ListBox lb = (ListBox)sender;
+                lb.Items.Add(e.Data.GetData(DataFormats.Text));
+            }
         }
     }
 }

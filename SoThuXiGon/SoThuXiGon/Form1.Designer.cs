@@ -68,6 +68,7 @@
             this.lstThuMoi.Name = "lstThuMoi";
             this.lstThuMoi.Size = new System.Drawing.Size(120, 199);
             this.lstThuMoi.TabIndex = 2;
+            this.lstThuMoi.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
             this.lstThuMoi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ListBox_MouseDown);
             // 
             // lstDanhSach
@@ -78,6 +79,8 @@
             this.lstDanhSach.Name = "lstDanhSach";
             this.lstDanhSach.Size = new System.Drawing.Size(120, 199);
             this.lstDanhSach.TabIndex = 3;
+            this.lstDanhSach.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDanhSach_DragDrop);
+            this.lstDanhSach.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
             this.lstDanhSach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ListBox_MouseDown);
             // 
             // btnChon
