@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace SoThuXiGon
 {
@@ -26,8 +28,9 @@ namespace SoThuXiGon
             ListBox lb = (ListBox)sender;
             int index = lb.IndexFromPoint(e.X, e.Y);
 
-            lb.DoDragDrop(lb.Items[index].ToString(),
-                          DragDropEffects.Copy);
+            if (index != -1)
+                lb.DoDragDrop(lb.Items[index].ToString(),
+                              DragDropEffects.Copy);
         }
         private void ListBox_DragEnter(object sender, DragEventArgs e)
         {
@@ -45,5 +48,76 @@ namespace SoThuXiGon
                 lb.Items.Add(e.Data.GetData(DataFormats.Text));
             }
         }
+
+        private void Save(object sender, EventArgs e)
+        {
+            // Mo tap tin
+            StreamWriter writer = new StreamWriter("danhsachthu.txt");
+
+            if (writer == null) return;
+
+            foreach (var item in lstDanhSach.Items)
+                writer.WriteLine(item.ToString());
+
+            writer.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void mnuLoad_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = new StreamReader("thumoi.txt");
+            if (reader == null) return;
+            string input = null;
+            while ((input = reader.ReadLine()) != null)
+            {
+                lstThuMoi.Items.Add(input);
+
+            }
+            reader.Close();
+            using (StreamReader rs = new StreamReader("danhsachthu.txt"))
+            {
+                input = null;
+                while ((input = rs.ReadLine()) != null)
+                {
+                    lstDanhSach.Items.Add(input);
+
+                }
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = string.Format("Bây giờ là {0}:{1}:{2} ngày {3} tháng {4} năm {5}",
+                                          DateTime.Now.Hour,
+                                          DateTime.Now.Minute,
+                                          DateTime.Now.Second,
+                                          DateTime.Now.Day,
+                                          DateTime.Now.Month,
+                                          DateTime.Now.Year);
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
     }
 }
+        
+    
+
+
+
+
+
+
+
+
