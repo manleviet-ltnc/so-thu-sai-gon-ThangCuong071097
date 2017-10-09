@@ -121,4 +121,16 @@
   <data name="if_floppy_285657" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\if_floppy_285657.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="if_cut_172590" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_cut_172590.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_copy_172587" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_copy_172587.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_content-paste_326599" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_content-paste_326599.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="if_Streamline-70_185090" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\if_Streamline-70_185090.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

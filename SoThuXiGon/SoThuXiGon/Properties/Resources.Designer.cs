@@ -63,9 +63,49 @@ namespace SoThuXiGon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_content_paste_326599 {
+            get {
+                object obj = ResourceManager.GetObject("if_content-paste_326599", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_copy_172587 {
+            get {
+                object obj = ResourceManager.GetObject("if_copy_172587", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_cut_172590 {
+            get {
+                object obj = ResourceManager.GetObject("if_cut_172590", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_floppy_285657 {
             get {
                 object obj = ResourceManager.GetObject("if_floppy_285657", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Streamline_70_185090 {
+            get {
+                object obj = ResourceManager.GetObject("if_Streamline-70_185090", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

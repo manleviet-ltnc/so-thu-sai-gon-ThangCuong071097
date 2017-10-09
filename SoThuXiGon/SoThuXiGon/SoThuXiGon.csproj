@@ -82,5 +82,17 @@
   <ItemGroup>
     <None Include="Resources\if_floppy_285657.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_copy_172587.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_cut_172590.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_content-paste_326599.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Streamline-70_185090.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

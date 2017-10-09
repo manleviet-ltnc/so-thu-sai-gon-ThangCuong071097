@@ -14,6 +14,9 @@ namespace SoThuXiGon
 {
     public partial class Form1 : Form
     {
+        private bool isItemChanged;
+        private bool isSave;
+
         public Form1()
         {
             InitializeComponent();
@@ -109,6 +112,44 @@ namespace SoThuXiGon
         {
             timer1.Enabled = true;
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            mnuDelete_Click(sender, e);
+        }
+
+        private void mnuDelete_Click(object sender, EventArgs e)
+        {
+            if (lstDanhSach.SelectedIndex != -1)
+                lstDanhSach.Items.RemoveAt(lstDanhSach.SelectedIndex);
+
+            isItemChanged = true;
+        }
+        private void frmSaigonC_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isItemChanged == true)
+            {
+                if (isSave)
+                {
+                    DialogResult result = MessageBox.Show("Bạn có muốn lưu danh sách?",
+                                                          "",
+                                                          MessageBoxButtons.YesNoCancel,
+                                                          MessageBoxIcon.None);
+                    if (result == DialogResult.Yes)
+                    {
+                        Save(sender, e);
+                        e.Cancel = false;
+                    }
+                    else if (result == DialogResult.No)
+                        e.Cancel = false;
+                    else
+                        e.Cancel = true;
+                }
+            }
+            else
+                mnuClose_Click(sender, e);
+        }
+
     }
 }
         
